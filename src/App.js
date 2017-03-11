@@ -4,7 +4,6 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			name: "boggle",
 			board: [ 
 								[ 'b', 't', 'i', 'i' ],
 							  [ 'e', 'y', 'w', 'i' ],
@@ -14,12 +13,10 @@ class App extends Component {
 		}
 	}
 	render(){
-		const name = this.state.name;
 		const board = this.state.board;
 		return (
 			<div className="App">
-				<p>hello {name}</p>
-				{board.map(row=> <p>{row.join(" ")}</p>)}
+				{board.map((row, i) => <p key={i}>{row.join(" ")}</p>)}
 			</div>
 		)
 	}
