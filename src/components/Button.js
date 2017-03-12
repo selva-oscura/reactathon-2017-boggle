@@ -16,12 +16,14 @@ const styles = {
     }
 }
 
-const Button = ({name}) => {
+const Button = ({name, newGame}) => {
   return (
-    <div style={styles.ButtonStyle}>
-      {name}
+    <div style={styles.ButtonStyle}
+      onClick={newGame}
+    >
+      {name.toUpperCase()}
     </div>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

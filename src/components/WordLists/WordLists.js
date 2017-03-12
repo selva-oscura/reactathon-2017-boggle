@@ -1,14 +1,22 @@
 import React from 'react';
+import PlayerWords from './PlayerWords';
+
+const styles = {
+	wordListStyle: {
+		flex: 1,
+    display: 'flex',
+    flexDirection: 'row',
+		marginTop: 10,
+    marginBottom: 50,
+	}
+}
 
 const WordLists = ({wordLists}) => {
-	return (
-		<div name="Words">
-			<h4>Player 1</h4>
-			<p>words galore</p>
-			<h4>Player 2</h4>
-			<p>even more words galore</p>
-		</div>
-	);
-};
-export default WordLists;
+		return (
+			<div className="Words" style={styles.wordListStyle}>
+				{wordLists.map((player, i) => <PlayerWords key={i} name={player.name} words={player.words} />)}
+			</div>
+		)
+}
 
+export default WordLists;
