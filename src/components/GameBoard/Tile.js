@@ -5,7 +5,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#666666',
+    backgroundColor: '#D3C7BB',
     borderWidth: 1,
     borderRadius: 5,
     borderColor: '#007aff ',
@@ -16,7 +16,6 @@ const styles = {
 }
 
 const Tile = ({tile}) => {
-  console.log("tile", tile)
   return (
     <div style={styles.TileStyle}>
       <p>{tile}</p>
