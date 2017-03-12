@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Button from './Button.js';
+import Board from './GameBoard/Board.js'
 
 class App extends Component {
 	constructor(props){
@@ -16,10 +18,21 @@ class App extends Component {
 		const board = this.state.board;
 		return (
 			<div className="App">
-				{board.map((row, i) => <p key={i}>{row.join(" ")}</p>)}
+				<Board board={board} />
+				<div name="Buttons">
+					<Button name={'delete'}>Delete</Button>
+					<Button name={'submit'}>Submit</Button>
+				</div>
+				<div name="Words">
+					<h4>Player 1</h4>
+					<p>words galore</p>
+					<h4>Player 2</h4>
+					<p>even more words galore</p>
+					</div>
 			</div>
 		)
 	}
 }
 
 export default App;
+
